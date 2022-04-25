@@ -117,3 +117,25 @@ const questions = [
         }
     }
 ];
+// function for input
+const promptUser = userQuest => {
+    return inquirer.prompt(userQuest);
+}
+
+// initialize program function
+const init = () => {
+    promptUser(questions)
+        .then(userInput => {
+            return generateMarkdown(userInput);
+        })
+        .then(pageData => {
+            writeToFile("./dist/README.md", pageData);
+            console.log("All done!");
+        })
+        .catch(err => {
+            console.log(err);
+        });
+}
+
+// call initialize
+init();
