@@ -7,4 +7,4 @@ This projects goal was to build code that creates quiality README files for GitH
 ### Technologies Used
 Javascript, Node
 
-## Typical user flow video
+## User Flow Video
