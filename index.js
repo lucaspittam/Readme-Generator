@@ -1,7 +1,7 @@
 //require statements for necessary application components
 const inquirer = require("inquirer");
-const generateMarkdown = require("./source/generateMarkdown.js");
-const writeToFile = require("./create/createPage.js");
+const generateMarkdown = require("./source/markdown.js");
+const writeToFile = require("./create/page.js");
 
 // array for user questions 
 const questions = [
@@ -106,12 +106,12 @@ const questions = [
     {
         type: "input",
         name: "email",
-        message: "Please enter your email address: ",
+        message: "Please enter email address: ",
         validate: emailInput => {
             if (emailInput) {
                 return true;
             } else {
-                console.log("Please enter your email adderss!");
+                console.log("Please enter email adderss!");
                 return false;
             }
         }
