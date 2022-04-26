@@ -28,3 +28,56 @@ const generateLicense = license => {
         }
     }
   }
+  //function for if user selected  default value and givesthe text if the user used custom , does nothing and returns og text.
+const generateContribution = contribute => {
+    if (contribute === "Contributor Covenant") {
+      return `Project follows the guidelines of the [Contributor Covenant](https://www.contributor-covenant.org/version/2/0/code_of_conduct/). If you are interested in contributing, please email in the Questions section of this README.
+      `
+    } else return contribute;
+  }
+  
+  // function generate  README markdown
+  const generateMarkdown = data => {
+  
+    const {title, description, installation, usage, license, contribute, tests, ...contact} = data;
+  
+    const licenseInfo = generateLicense(license);
+    return `
+    # ${title}
+  
+    ${licenseInfo.badge}
+  
+    ## Description
+    ${description}
+  
+    ## Table of Contents
+    * [Description](#description)
+    * [Installation](#installation)
+    * [Usage](#usage)
+    * [License](#license)
+    * [Contribution](#contribute)
+    * [Tests](#tests)
+    * [Questions](#questions)
+  
+    ## Installation
+    ${installation}
+  
+    ## Usage
+    ${usage}
+  
+    ## License
+    ${licenseInfo.description}
+  
+    ## Contribution
+    ${generateContribution(contribute)}
+  
+    ## Tests
+    ${tests}
+  
+    ## Questions
+    If you have any questions about this project, you can email me at ${contact.email}.
+    For other projects, check out my [GitHub](https://github.com/${contact.username}).
+  `;
+  }
+  
+  module.exports = generateMarkdown;
