@@ -1,10 +1,10 @@
 
-    # 'Readme-Generator
+    # enter project title here
   
     ![MIT](https://img.shields.io/badge/license-MIT-brightgreen)
   
     ## Description
-    This projects goal was to build code that creates quiality README files for GitHub projects.
+    enter project description here
   
     ## Table of Contents
     * [Description](#description)
@@ -16,21 +16,21 @@
     * [Questions](#questions)
   
     ## Installation
-    npm install inquirer and then run node
+    enter installation instructions here
   
     ## Usage
-    n/A
+    enter application usage here
   
     ## License
     Software is licensed under [MIT license](https://choosealicense.com/licenses/mit/).
   
     ## Contribution
-    N/A
+    enter instructions here
   
     ## Tests
-    n/A
+    enter test instructions here
   
     ## Questions
-    If you have any questions about this project, you can email me at pittamlucas@gmail.com.
-    For other projects, check out my [GitHub](https://github.com/lucaspittam).
+    If you have any questions about this project, you can email me at enter email@email.com here.
+    For other projects, check out my [GitHub](https://github.com/enter username here).
   
